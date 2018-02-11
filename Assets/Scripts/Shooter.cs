@@ -2,21 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPlane : MonoBehaviour {
-
-    public Transform shooterloc;
+public class Shooter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-
-    void OnCollisionEnter(Collision collision)
-    {
     }
 }
