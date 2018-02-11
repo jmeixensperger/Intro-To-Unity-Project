@@ -6,26 +6,19 @@ public class Bullet : MonoBehaviour {
 
     private Transform mypos;
     private Transform camerapos;
-    public GameObject camera;
-    public Particle sabercollision;
+    public GameObject cam;
     public float speed;
 
 	// Use this for initialization
 	void Start () {
-        camerapos = camera.transform;
+        camerapos = cam.transform;
         mypos = this.transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         var moveAmount = speed * Time.deltaTime;
-        mypos.position = Vector3.MoveTowards(mypos.position, camerapos.position, speed);
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Main Camera")
-            Destroy(this);
+        mypos.position = Vector3.MoveTowards(mypos.position, camerapos.position, moveAmount);
     }
 
 }
