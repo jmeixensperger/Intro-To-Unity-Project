@@ -282,13 +282,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LaserSword\LaserSwordBladeCreatorScript.cs" />
-    <Compile Include="Assets\LaserSword\LaserSwordScript.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\ExtDataDemo.cs" />
     <Compile Include="Assets\Scripts\Lightsaber.cs" />
-    <Compile Include="Assets\Scripts\PlayerPlane.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
+    <Compile Include="Assets\Scripts\ShooterController.cs" />
     <Compile Include="Assets\Scripts\WiimoteDemo.cs" />
     <Compile Include="Assets\Wiimote\Scripts\Enums.cs" />
     <Compile Include="Assets\Wiimote\Scripts\HIDapi.cs" />
@@ -306,11 +304,6 @@
     <Compile Include="Assets\Wiimote\Scripts\WiimoteData\WiimoteData.cs" />
     <Compile Include="Assets\Wiimote\Scripts\WiimoteData\WiiUProData.cs" />
     <Compile Include="Assets\Wiimote\Scripts\WiimoteManager.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\LaserSword\LaserSwordGlowShader.shader" />
-    <None Include="Assets\LaserSword\LaserSwordShader.shader" />
-    <None Include="Assets\LaserSword\Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
