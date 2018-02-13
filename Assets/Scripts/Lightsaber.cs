@@ -20,9 +20,11 @@ public class Lightsaber : MonoBehaviour {
     {
         if (collision.gameObject.name == "Bullet")
         {
-            Destroy(collision.gameObject);
             blockSound.Play();
             // animation? sparks
+			var exp = GetComponent<ParticleSystem>();
+			exp.Play ();
+			Destroy(collision.gameObject);
         }
     }
 }
