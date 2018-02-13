@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-    public AudioSource blockSound;
+    public AudioClip blockSound;
     public Transform shooterpos;
     public Transform camerapos;
     private Transform mypos;
-    public float speed;
+    private float speed;
     private bool hasCollided;
 
 	// Use this for initialization
 	void Start () {
+        gameObject.SetActive(false);
         mypos = this.transform;
+        speed = 15.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         var moveAmount = speed * Time.deltaTime;
-        if (!hasCollided)
+        if (isActiveAndEnabled && !hasCollided)
             mypos.position = Vector3.MoveTowards(mypos.position, camerapos.position, moveAmount);
     }
 
@@ -33,10 +35,11 @@ public class Bullet : MonoBehaviour {
         else if (collision.gameObject.name == "outside saber")
         {
             Debug.Log("Nice block!");
-            //blockSound.Play();
+            AudioSource.PlayClipAtPoint(blockSound, mypos.position);
         }
-        // move bullet back to shooter position
+        // move bullet back to shooter position and de-activate (make invisible)
         mypos.position = Vector3.MoveTowards(mypos.position, shooterpos.position, 100000);
+        gameObject.SetActive(false);
         hasCollided = false;
     }
 

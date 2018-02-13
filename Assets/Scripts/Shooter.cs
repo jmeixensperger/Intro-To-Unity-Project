@@ -15,8 +15,10 @@ public class Shooter : MonoBehaviour {
     }
 
     // Make the bullet visible and begin its movement towards the player
-    public void Fire() {
+    public bool Fire() {
+        if (bullet.isActiveAndEnabled)
+            return false;
         bullet.gameObject.SetActive(true);
-        Debug.Log("Fire has been called!");
+        return true;
     }
 }

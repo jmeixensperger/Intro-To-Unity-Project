@@ -7,6 +7,7 @@ using WiimoteApi;
 
 public class WiimoteDemo : MonoBehaviour {
 
+    public ShooterController shooters;
     public WiimoteModel model;
     public RectTransform[] ir_dots;
     public RectTransform[] ir_bb;
@@ -221,6 +222,10 @@ public class WiimoteDemo : MonoBehaviour {
                 GUILayout.Label("Pitch Slow: " + data.PitchSlow);
                 GUILayout.Label("Yaw Slow: " + data.YawSlow);
                 GUILayout.Label("Roll Slow: " + data.RollSlow);
+                if (GUILayout.Button("Start Game!"))
+                {
+                    shooters.StartShooting();
+                }
                 if (GUILayout.Button("Zero Out WMP"))
                 {
                     data.SetZeroValues();

@@ -11,8 +11,8 @@ public class ShooterController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        active = true; // set this to false later, can activate when wmp is also active?
-	}
+        active = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,8 +20,13 @@ public class ShooterController : MonoBehaviour {
         timeTaken += Time.deltaTime;
         if (active && timeTaken > delayTime)
         {
-            int index = Random.Range(0,shooters.Length-1);
-            shooters[index].Fire();
+            int index = Random.Range(0, shooters.Length - 1);
+            bool didFire = shooters[index].Fire();
+            while (!didFire)
+            {
+                index = Random.Range(0, shooters.Length - 1);
+                didFire = shooters[index].Fire();
+            }
             timeTaken = 0;
         }
 	}
