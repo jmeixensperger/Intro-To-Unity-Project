@@ -35,4 +35,8 @@ public class ShooterController : MonoBehaviour {
     public void StartShooting() {
         active = true;
     }
+
+	public void StopShooting() {
+		active = false;
+	}
 }
