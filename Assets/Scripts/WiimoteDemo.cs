@@ -12,6 +12,7 @@ public class WiimoteDemo : MonoBehaviour {
     public RectTransform[] ir_dots;
     public RectTransform[] ir_bb;
     public RectTransform ir_pointer;
+	public AudioClip LightsabreOn;
 
     private Quaternion initial_rotation;
 
@@ -225,6 +226,7 @@ public class WiimoteDemo : MonoBehaviour {
                 if (GUILayout.Button("Start Game!"))
                 {
                     shooters.StartShooting();
+					AudioSource.PlayClipAtPoint(LightsabreOn, new Vector3(0, 0, 5));
                 }
                 if (GUILayout.Button("Zero Out WMP"))
                 {

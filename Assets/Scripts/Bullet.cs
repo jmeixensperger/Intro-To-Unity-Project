@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour {
     public AudioClip blockSound;
     public Transform shooterpos;
     public Transform camerapos;
+
     private Transform mypos;
     private float speed;
     private bool hasCollided;
@@ -19,7 +20,7 @@ public class Bullet : MonoBehaviour {
         mypos = this.transform;
         speed = 15.0f;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         var moveAmount = speed * Time.deltaTime;

@@ -9,9 +9,12 @@ public class ShooterController : MonoBehaviour {
     private float timeTaken;
     private bool active;
 
+	public AudioClip LightsabreOff;
+
 	// Use this for initialization
 	void Start () {
         active = false;
+
     }
 	
 	// Update is called once per frame
@@ -34,9 +37,11 @@ public class ShooterController : MonoBehaviour {
     // Bullets will only fire when the controller is "active"
     public void StartShooting() {
         active = true;
+
     }
 
 	public void StopShooting() {
 		active = false;
+		AudioSource.PlayClipAtPoint (LightsabreOff, new Vector3 (0, 0, 5));
 	}
 }
