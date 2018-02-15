@@ -10,6 +10,9 @@ public class Bullet : MonoBehaviour {
     private Transform mypos;
     private float speed;
     private bool hasCollided;
+	public LifeBar lifeBar;
+	public Material material;
+	public int count = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +34,17 @@ public class Bullet : MonoBehaviour {
         if (collision.gameObject.name == "PlayerPlane")
         {
             Debug.Log("You've been hit!");
+
+			if (count == 0)
+				lifeBar.changeColor1 (material);
+			if (count == 1)
+				lifeBar.changeColor2 (material);
+			if (count == 2) {
+				lifeBar.changeColor3 (material);
+				Debug.Log ("Game Over");
+				// end game here
+			}
+			count += 1;
         }
         else if (collision.gameObject.name == "outside saber")
         {
