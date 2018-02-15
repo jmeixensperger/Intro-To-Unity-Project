@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Lightsaber : MonoBehaviour {
 
-    public AudioSource blockSound;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -16,15 +14,4 @@ public class Lightsaber : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Bullet")
-        {
-            blockSound.Play();
-            // animation? sparks
-			var exp = GetComponent<ParticleSystem>();
-			exp.Play ();
-			Destroy(collision.gameObject);
-        }
-    }
 }
