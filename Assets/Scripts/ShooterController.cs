@@ -24,7 +24,7 @@ public class ShooterController : MonoBehaviour {
         timeTaken += Time.deltaTime;
         if (active && timeTaken > delayTime)
         {
-            int index = Random.Range(0, shooters.Length - 1);
+            int index = Random.Range(0, shooters.Length);
             bool didFire = shooters[index].Fire();
             while (!didFire)
             {
@@ -34,11 +34,11 @@ public class ShooterController : MonoBehaviour {
             timeTaken = 0;
         }
         // re-calculate delayTime based on score (increment every 3 blocks)
-        if (score >= 3 && delayTime > 1.0f)
+        if (score >= 3 && delayTime > 1.1f)
         {
             delayTime = delayTime * 0.8f;
             Debug.Log("delayTime reduced to: " + delayTime.ToString());
-            if (delayTime < 1.0f)
+            if (delayTime < 1.1f)
                 Debug.Log("Minimum delayTime reached for 5 shooters.");
             score = 0;
         }
