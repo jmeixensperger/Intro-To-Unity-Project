@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour {
 	void Start () {
         gameObject.SetActive(false);
         mypos = this.transform;
-        speed = 20.0f;
+        speed = 25.0f;
 	}
 	
 	// Update is called once per frame
@@ -46,6 +46,11 @@ public class Bullet : MonoBehaviour {
         mypos.position = Vector3.MoveTowards(mypos.position, shooterpos.position, 100000);
         gameObject.SetActive(false);
         hasCollided = false;
+    }
+
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 
 }

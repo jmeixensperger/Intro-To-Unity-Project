@@ -13,7 +13,7 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
-        health = 0;
+        health = 0; // really damage taken
         score = 0;
     }
 

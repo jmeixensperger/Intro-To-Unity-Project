@@ -6,7 +6,7 @@ public class ShooterController : MonoBehaviour {
 
     public UIController gui;
     public Shooter[] shooters;
-    public float delayTime;
+    private float delayTime;
     private float timeTaken;
     private bool active;
     private int score;
@@ -15,6 +15,7 @@ public class ShooterController : MonoBehaviour {
     void Start () {
         active = false;
         score = 0;
+        delayTime = 8.0f;
     }
 
 	// Update is called once per frame
@@ -32,11 +33,13 @@ public class ShooterController : MonoBehaviour {
             }
             timeTaken = 0;
         }
-        // re-calculate delayTime based on score (increment every 5 blocks)
-        if (score >= 5)
+        // re-calculate delayTime based on score (increment every 3 blocks)
+        if (score >= 3 && delayTime > 1.0f)
         {
-            delayTime = delayTime * 0.75f;
+            delayTime = delayTime * 0.8f;
             Debug.Log("delayTime reduced to: " + delayTime.ToString());
+            if (delayTime < 1.0f)
+                Debug.Log("Minimum delayTime reached for 5 shooters.");
             score = 0;
         }
 	}
@@ -57,5 +60,9 @@ public class ShooterController : MonoBehaviour {
 
 	public void StopShooting() {
 		active = false;
+        for (int i = 0; i < shooters.Length; i++)
+        {
+            shooters[i].bullet.Deactivate();
+        }
 	}
 }
