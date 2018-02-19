@@ -108,6 +108,11 @@ public class WiimoteDemo : MonoBehaviour {
             wiimote = null;
         }
 
+        if (GUILayout.Button("Quit Game"))
+        {
+            Application.Quit();
+        }
+
         if (wiimote == null)
             return;
 

@@ -7,12 +7,12 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LaserSwordBladeBlueGlowMaterial
-  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 425bb4f30f3670849a43db82a7377365, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -38,8 +38,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MKGlowTex:
+        m_Texture: {fileID: 2800000, guid: 441cd962e8e7e4847806b3c51a746385, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2709ae51a36c72043a9cf3d6a06e379a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 441cd962e8e7e4847806b3c51a746385, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -61,7 +65,9 @@ Material:
     - _DstBlend: 0
     - _Glossiness: 0.5
     - _Intensity: 1
-    - _InvFade: 1
+    - _InvFade: 1.71
+    - _MKGlowPower: 1.98
+    - _MKGlowTexStrength: 0.26
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -71,7 +77,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.027249161, g: 0.38457522, b: 0.9264706, a: 0.128}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MKGlowColor: {r: 0.4944219, g: 0.013516448, b: 0.9191176, a: 0.447}
+    - _MKGlowTexColor: {r: 0.875, g: 0.019301489, b: 0.49731258, a: 1}
     - _RimColor: {r: 0.77931046, g: 1, b: 0, a: 1}
     - _TintColor: {r: 0.07352942, g: 0.07352942, b: 1, a: 0.39215687}

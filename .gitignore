@@ -1,3 +1,5 @@
 Library/
 UnityPackageManager/
 Temp/
+obj/
+Wiimote3_Data/

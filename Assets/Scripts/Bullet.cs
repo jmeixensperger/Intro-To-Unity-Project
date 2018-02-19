@@ -11,14 +11,14 @@ public class Bullet : MonoBehaviour {
     private Transform mypos;
     private float speed;
     private bool hasCollided;
-	public LifeBar lifeBar;
+	public UIController gui;
 	public Material material;
 
 	// Use this for initialization
 	void Start () {
         gameObject.SetActive(false);
         mypos = this.transform;
-        speed = 15.0f;
+        speed = 25.0f;
 	}
 
 	// Update is called once per frame
@@ -34,26 +34,24 @@ public class Bullet : MonoBehaviour {
         if (collision.gameObject.name == "PlayerPlane")
         {
             Debug.Log("You've been hit!");
-
-			if (lifeBar.getCount() == 0)
-				lifeBar.changeColor1 (material);
-			else if (lifeBar.getCount() == 1)
-				lifeBar.changeColor2 (material);
-			else if (lifeBar.getCount() == 2) {
-				lifeBar.changeColor3 (material);
-				Debug.Log ("Game Over");
-
-			}
+            if (gui.getCurrentHealth() < gui.getMaxHealth())
+                gui.changeColor();
         }
         else if (collision.gameObject.name == "outside saber")
         {
             Debug.Log("Nice block!");
             AudioSource.PlayClipAtPoint(blockSound, mypos.position);
+            gui.incrementScore();
         }
         // move bullet back to shooter position and de-activate (make invisible)
         mypos.position = Vector3.MoveTowards(mypos.position, shooterpos.position, 100000);
         gameObject.SetActive(false);
         hasCollided = false;
+    }
+
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 
 }
