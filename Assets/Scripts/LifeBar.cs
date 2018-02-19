@@ -32,5 +32,7 @@ public class LifeBar : MonoBehaviour {
 		lifeSquare3.GetComponent<Renderer> ().material = mat;
 		count += 1;
 		shooterController.StopShooting ();
+        GameObject handle = GameObject.Find("handle");
+        handle.GetComponent<AudioSource>().Stop();
 	}
 }

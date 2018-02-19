@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1108095899}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: fa55a2f8e3fcfc243be4e933bde97de8, type: 3}
   volume: 1
 --- !u!23 &146018363
 MeshRenderer:
@@ -1318,7 +1318,7 @@ MonoBehaviour:
   - {fileID: 56270388}
   - {fileID: 1048950922}
   ir_pointer: {fileID: 2053116506}
-  LightsabreOn: {fileID: 0}
+  LightsabreOn: {fileID: 8300000, guid: 2e5b8b0e84ce4274786b4ceb4134e572, type: 3}
 --- !u!81 &651080382
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1773,7 +1773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 29709626}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: fa55a2f8e3fcfc243be4e933bde97de8, type: 3}
   volume: 1
 --- !u!1 &902438090
 GameObject:
@@ -1806,7 +1806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2010042491}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: fa55a2f8e3fcfc243be4e933bde97de8, type: 3}
   volume: 1
 --- !u!23 &902438092
 MeshRenderer:
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1892176601}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: fa55a2f8e3fcfc243be4e933bde97de8, type: 3}
   volume: 1
 --- !u!23 &1224002375
 MeshRenderer:
@@ -3097,7 +3097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 251993990}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: fa55a2f8e3fcfc243be4e933bde97de8, type: 3}
   volume: 1
 --- !u!23 &1812113110
 MeshRenderer:

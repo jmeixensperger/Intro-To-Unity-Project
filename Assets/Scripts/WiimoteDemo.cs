@@ -149,8 +149,14 @@ public class WiimoteDemo : MonoBehaviour {
         if (GUILayout.Button("Request Identify WMP"))
             wiimote.RequestIdentifyWiiMotionPlus();
         if ((wiimote.wmp_attached || wiimote.Type == WiimoteType.PROCONTROLLER) && GUILayout.Button("Activate WMP"))
+        {
             wiimote.ActivateWiiMotionPlus();
-        if ((wiimote.current_ext == ExtensionController.MOTIONPLUS ||
+            AudioSource.PlayClipAtPoint(LightsabreOn, new Vector3(0, 0, 5));
+            GameObject handle = GameObject.Find("handle");
+            handle.GetComponent<AudioSource>().Play();
+            
+        }
+            if ((wiimote.current_ext == ExtensionController.MOTIONPLUS ||
             wiimote.current_ext == ExtensionController.MOTIONPLUS_CLASSIC ||
             wiimote.current_ext == ExtensionController.MOTIONPLUS_NUNCHUCK) && GUILayout.Button("Deactivate WMP"))
             wiimote.DeactivateWiiMotionPlus();
@@ -224,9 +230,8 @@ public class WiimoteDemo : MonoBehaviour {
                 GUILayout.Label("Yaw Slow: " + data.YawSlow);
                 GUILayout.Label("Roll Slow: " + data.RollSlow);
                 if (GUILayout.Button("Start Game!"))
-                {
+                {                    
                     shooters.StartShooting();
-					AudioSource.PlayClipAtPoint(LightsabreOn, new Vector3(0, 0, 5));
                 }
                 if (GUILayout.Button("Zero Out WMP"))
                 {
