@@ -289,6 +289,7 @@
     <Compile Include="Assets\Scripts\Lightsaber.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\ShooterController.cs" />
+    <Compile Include="Assets\Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\WiimoteDemo.cs" />
     <Compile Include="Assets\Wiimote\Scripts\Enums.cs" />
     <Compile Include="Assets\Wiimote\Scripts\HIDapi.cs" />

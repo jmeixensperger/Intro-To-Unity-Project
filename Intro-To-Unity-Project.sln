@@ -2,8 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro-To-Unity-Project", "Intro-To-Unity-Project.csproj", "{352A9119-5F5A-DF90-8385-04AC17EE255D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro-To-Unity-Project.Editor", "Intro-To-Unity-Project.Editor.csproj", "{23E1D7FE-305A-E7B6-4A24-E82126ED0FC1}"
+master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +14,7 @@ Global
 		{352A9119-5F5A-DF90-8385-04AC17EE255D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{352A9119-5F5A-DF90-8385-04AC17EE255D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{352A9119-5F5A-DF90-8385-04AC17EE255D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23E1D7FE-305A-E7B6-4A24-E82126ED0FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23E1D7FE-305A-E7B6-4A24-E82126ED0FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23E1D7FE-305A-E7B6-4A24-E82126ED0FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23E1D7FE-305A-E7B6-4A24-E82126ED0FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+master
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
